@@ -22,7 +22,13 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <div className="navbar-logo">White Tiger Muay Thai</div>
+        <Link
+          to="/"
+          onClick={handleLinkClick}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <div className="navbar-logo">White Tiger Muay Thai</div>
+        </Link>
         <button
           className="navbar-toggle"
           onClick={() => setOpen(!open)}

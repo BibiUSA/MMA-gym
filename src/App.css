@@ -270,7 +270,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0rem;
 }
 .team-image {
   width: 100%;

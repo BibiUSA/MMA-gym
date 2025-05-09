@@ -74,10 +74,19 @@ function TheTeam() {
     },
   ];
   return (
-    <div className="team-gallery">
+    <div className="team-gallery" style={{ width: "100%", padding: "0" }}>
       {teamImages.map((img, idx) => (
-        <div className="team-image-wrapper" key={idx}>
-          <img src={img.url} alt={img.alt} className="team-image" />
+        <div
+          className="team-image-wrapper"
+          key={idx}
+          style={{ width: "100%", margin: "0" }}
+        >
+          <img
+            src={img.url}
+            alt={img.alt}
+            className="team-image"
+            style={{ width: "100%" }}
+          />
         </div>
       ))}
     </div>
@@ -93,9 +102,13 @@ function Media() {
     "r_c3C8H450s",
   ];
   return (
-    <div className="media-gallery">
+    <div className="media-gallery" style={{ width: "100%", padding: "0" }}>
       {videoIds.map((id, idx) => (
-        <div className="media-video-wrapper" key={id}>
+        <div
+          className="media-video-wrapper"
+          key={id}
+          style={{ width: "100%", margin: "0" }}
+        >
           <iframe
             className="media-video"
             src={`https://www.youtube.com/embed/${id}`}
@@ -103,6 +116,7 @@ function Media() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            style={{ width: "100%" }}
           ></iframe>
         </div>
       ))}
