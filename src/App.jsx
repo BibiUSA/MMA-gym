@@ -31,7 +31,7 @@ function Home() {
     <>
       <div className="landing">
         <h1>Welcome to White TIger Muay Thai Gym</h1>
-        <p>Train with the best. Unleash your potential.</p>
+        <p>Become What You Must</p>
       </div>
       <div className="home-video-wrapper">
         <iframe
