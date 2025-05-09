@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #181818;
+  color: #fff;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.navbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  background: #646cff;
+  color: #fff;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 0.3rem;
+  z-index: 1100;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin-right: 0;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: #ff9800 !important;
+  border-radius: 2px;
+  transition: 0.3s;
+  border: none;
+}
+
+.navbar-toggle:focus {
+  outline: none;
+}
+
+@media (max-width: 1400px) {
+  .navbar-inner {
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .navbar-links {
+    gap: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .navbar-inner {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+  .navbar-toggle {
+    display: flex;
+    position: relative;
+    right: 0;
+    margin-right: 0;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #181818;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: max-height 0.3s ease;
+  }
+  .navbar-links.open {
+    max-height: 500px;
+    padding-bottom: 1rem;
+    overflow: visible;
+  }
+} 
